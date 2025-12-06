@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Smart Quiz Master | Project Details</title>
+    <title>Smart Quiz Master | Case Study</title>
     <meta name="description" content="Case study of Smart Quiz Master project." />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -20,8 +20,8 @@
       .carousel-container {
         position: relative;
         width: 100%;
-        height: 100%; /* Fill the container provided by the template */
-        min-height: 400px; /* Ensure it has height even if images load slowly */
+        height: 100%;
+        min-height: 400px;
         overflow: hidden;
         border-radius: 5px;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -135,7 +135,7 @@
         <h1 class="heading-primary">Smart Quiz Master</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            An AI-powered revision tool that generates interactive quizzes from PDFs and YouTube videos to help students learn faster.
+            A full-stack AI application that generates interactive quizzes from PDFs and YouTube videos, built with React, Node.js, and Gemini.
           </p>
         </div>
         <div class="project-cs-hero__cta">
@@ -163,28 +163,31 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                Students often struggle to find practice questions for specific study materials. 
-                <strong>Smart Quiz Master</strong> solves this by allowing users to upload their own content (Lecture PDFs or YouTube URLs). 
-                The system analyzes the material and instantly creates a custom quiz.
+                Smart Quiz Master is a study aid that allows users to generate quizzes instantly from their own learning materials. 
+                Whether it is a lecture PDF or an educational YouTube video, the app extracts the key concepts and uses AI to challenge the user's understanding.
               </p>
               
               <h3 class="project-details__content-title">Technical Architecture</h3>
               <p class="project-details__desc-para">
-                The application follows a modern AI-wrapper architecture. The frontend is built for simplicity, while the backend utilizes 
-                <strong>LangChain</strong> to manage the flow between the user's data and the <strong>LLM API</strong>. 
-                YouTube transcripts are fetched using specialized APIs, cleaned, and then fed into the model for question generation.
+                The application is built on a robust architecture:
               </p>
+              <ul style="margin-bottom: 20px; color: #666; line-height: 1.6;">
+                <li><strong>Frontend:</strong> Developed using <strong>React</strong> and <strong>Vite</strong> for a fast, responsive user interface.</li>
+                <li><strong>Backend:</strong> A <strong>Node.js</strong> server hosted on Render handles API requests and data processing.</li>
+                <li><strong>AI Engine:</strong> Integrated directly with the <strong>Gemini LLM</strong> to process text and generate intelligent questions.</li>
+                <li><strong>Database:</strong> <strong>MongoDB</strong> is used to store user data and quiz history.</li>
+              </ul>
             </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tech Stack</h3>
               <div class="skills">
-                <div class="skills__skill">Python</div>
-                <div class="skills__skill">LangChain</div>
+                <div class="skills__skill">React (Vite)</div>
+                <div class="skills__skill">Node.js</div>
+                <div class="skills__skill">MongoDB</div>
                 <div class="skills__skill">Gemini API</div>
-                <div class="skills__skill">Streamlit</div>
                 <div class="skills__skill">HTML/CSS</div>
-                <div class="skills__skill">Git</div>
+                <div class="skills__skill">Render</div>
               </div>
             </div>
 
