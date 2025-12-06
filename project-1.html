@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Case Study of Project 1</title>
-    <meta name="description" content="Case study page of Project" />
+    <title>Smart Quiz Master | Project Details</title>
+    <meta name="description" content="Case study of Smart Quiz Master project." />
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -15,6 +15,56 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 100%; /* Fill the container provided by the template */
+        min-height: 400px; /* Ensure it has height even if images load slowly */
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      .carousel-slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .carousel-slide.active {
+        display: block;
+        animation: fadeEffect 0.5s;
+      }
+      .prev-btn, .next-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0,0,0,0.3);
+        border: none;
+        z-index: 10;
+      }
+      .next-btn {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev-btn:hover, .next-btn:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      @keyframes fadeEffect {
+        from {opacity: 0.6}
+        to {opacity: 1}
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -22,12 +72,12 @@
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
             <img
-              src="./assets/png/john-doe.png"
-              alt="Ram Maheshwari Logo Image"
+              src="./assets/png/ram_pic_code.png"
+              alt="Ram Mishra Logo Image"
               class="header__logo-img"
             />
           </div>
-          <span class="header__logo-sub">John Doe</span>
+          <span class="header__logo-sub">Ram Mishra</span>
         </div>
         <div class="header__main">
           <ul class="header__links">
@@ -66,15 +116,12 @@
             <li class="header__sm-menu-link">
               <a href="./index.html"> Home </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#about"> About </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#projects"> Projects </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#contact"> Contact </a>
             </li>
@@ -82,78 +129,75 @@
         </div>
       </div>
     </header>
+
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Project 1</h1>
+        <h1 class="heading-primary">Smart Quiz Master</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-            in numquam incidunt earum quaerat cum fuga, atque similique natus
-            nobis sit.
+            An AI-powered revision tool that generates interactive quizzes from PDFs and YouTube videos to help students learn faster.
           </p>
         </div>
         <div class="project-cs-hero__cta">
-          <a href="#" class="btn btn--bg" target="_blank">Live Link</a>
+          <a href="https://appledinger.github.io/smart_quiz_master_mvp/" class="btn btn--bg" target="_blank">Live Demo</a>
         </div>
       </div>
     </section>
+
     <section class="project-details">
       <div class="main-container">
         <div class="project-details__content">
+          
           <div class="project-details__showcase-img-cont">
-            <img
-              src="./assets/jpeg/project-mockup-example.jpeg"
-              alt="Project Image"
-              class="project-details__showcase-img"
-            />
+            <div class="carousel-container" id="carousel-details">
+                <img src="./assets/jpeg/project1img1.jpeg" class="carousel-slide active" alt="Quiz App Overview">
+                <img src="./assets/jpeg/project1img2.jpeg" class="carousel-slide" alt="Quiz App Feature 1">
+                <img src="./assets/jpeg/project1img3.jpeg" class="carousel-slide" alt="Quiz App Feature 2">
+                
+                <button class="prev-btn" onclick="changeSlide('carousel-details', -1)">&#10094;</button>
+                <button class="next-btn" onclick="changeSlide('carousel-details', 1)">&#10095;</button>
+            </div>
           </div>
+
           <div class="project-details__content-main">
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Neque alias tenetur minus quaerat
-                aliquid, aut provident blanditiis, deleniti aspernatur ipsam
-                eaque veniam voluptatem corporis vitae mollitia laborum corrupti
-                ullam rem?
+                Students often struggle to find practice questions for specific study materials. 
+                <strong>Smart Quiz Master</strong> solves this by allowing users to upload their own content (Lecture PDFs or YouTube URLs). 
+                The system analyzes the material and instantly creates a custom quiz.
               </p>
+              
+              <h3 class="project-details__content-title">Technical Architecture</h3>
               <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem?
+                The application follows a modern AI-wrapper architecture. The frontend is built for simplicity, while the backend utilizes 
+                <strong>LangChain</strong> to manage the flow between the user's data and the <strong>LLM API</strong>. 
+                YouTube transcripts are fetched using specialized APIs, cleaned, and then fed into the model for question generation.
               </p>
             </div>
+
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Tools Used</h3>
+              <h3 class="project-details__content-title">Tech Stack</h3>
               <div class="skills">
-                <div class="skills__skill">HTML</div>
-                <div class="skills__skill">CSS</div>
-                <div class="skills__skill">JavaScript</div>
-                <div class="skills__skill">React</div>
-                <div class="skills__skill">SASS</div>
-                <div class="skills__skill">GIT</div>
-                <div class="skills__skill">Shopify</div>
-                <div class="skills__skill">Wordpress</div>
-                <div class="skills__skill">Google ADS</div>
-                <div class="skills__skill">Facebook Ads</div>
-                <div class="skills__skill">Android</div>
-                <div class="skills__skill">IOS</div>
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">LangChain</div>
+                <div class="skills__skill">Gemini API</div>
+                <div class="skills__skill">Streamlit</div>
+                <div class="skills__skill">HTML/CSS</div>
+                <div class="skills__skill">Git</div>
               </div>
             </div>
+
             <div class="project-details__links">
               <h3 class="project-details__content-title">See Live</h3>
               <a
-                href="#"
+                href="https://appledinger.github.io/smart_quiz_master_mvp/"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
                 >Live Link</a
               >
               <a
-                href="#"
+                href="https://github.com/AppleDinger/smart_quiz_master_mvp" 
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
                 >Code Link</a
@@ -163,6 +207,7 @@
         </div>
       </div>
     </section>
+
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
@@ -178,53 +223,51 @@
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <a target="_blank" rel="noreferrer" href="https://github.com/AppleDinger">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/github-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/twitter-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="#">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/yt-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="#">
-                <img
-                  class="main-footer__icon main-footer__icon--mr-none"
-                  src="./assets/png/insta-ico.png"
-                  alt="icon"
-                />
-              </a>
             </div>
           </div>
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">John Doe</h4>
+            <h4 class="heading heading-sm text-lt">Ram Mishra</h4>
             <p class="main-footer__short-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit facilis
-              tempora explicabo quae quod deserunt
+              CSE Student @ NIT Goa
             </p>
           </div>
         </div>
 
         <div class="main-footer__lower">
-          &copy; Copyright 2021. Made by
-          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-            >Ram Maheshwari</a
+          &copy; Copyright 2025. Made by
+          <a rel="noreferrer" target="_blank" href="./index.html"
+            >Ram Mishra</a
           >
         </div>
       </div>
     </footer>
+
     <script src="./index.js"></script>
+    
+    <script>
+      function changeSlide(carouselId, n) {
+        const container = document.getElementById(carouselId);
+        const slides = container.getElementsByClassName("carousel-slide");
+        let activeIndex = -1;
+        for (let i = 0; i < slides.length; i++) {
+          if (slides[i].classList.contains("active")) {
+            activeIndex = i;
+            slides[i].classList.remove("active");
+            break;
+          }
+        }
+        let newIndex = activeIndex + n;
+        if (newIndex >= slides.length) { newIndex = 0; }
+        if (newIndex < 0) { newIndex = slides.length - 1; }
+        slides[newIndex].classList.add("active");
+      }
+    </script>
   </body>
 </html>

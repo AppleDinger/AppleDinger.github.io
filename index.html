@@ -15,6 +15,58 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+      .carousel-slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .carousel-slide.active {
+        display: block;
+        animation: fadeEffect 0.5s;
+      }
+      .prev-btn, .next-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 10px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0,0,0,0.3);
+        border: none;
+        z-index: 10;
+      }
+      .next-btn {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev-btn:hover, .next-btn:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      @keyframes fadeEffect {
+        from {opacity: 0.6}
+        to {opacity: 1}
+      }
+      /* Style to space out the two buttons */
+      .btn-spacer {
+        margin-left: 10px; 
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -66,15 +118,12 @@
             <li class="header__sm-menu-link">
               <a href="./index.html"> Home </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#about"> About </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#projects"> Projects </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#contact"> Contact </a>
             </li>
@@ -82,6 +131,7 @@
         </div>
       </div>
     </header>
+
     <section class="home-hero">
       <div class="home-hero__content">
         <h1 class="heading-primary">Hey, My name is Ram Mishra</h1>
@@ -119,6 +169,7 @@
         <div class="mouse"></div>
       </div>
     </section>
+
     <section id="about" class="about sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
@@ -165,6 +216,7 @@
         </div>
       </div>
     </section>
+
     <section id="projects" class="projects sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-bg">
@@ -178,53 +230,76 @@
           
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
-                alt="Smart Quiz Master Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+              <div class="carousel-container" id="carousel-1">
+                <img src="./assets/jpeg/project1img1.jpeg" class="carousel-slide active" alt="Quiz App Screen 1">
+                <img src="./assets/jpeg/project1img2.jpeg" class="carousel-slide" alt="Quiz App Screen 2">
+                <img src="./assets/jpeg/project1img3.jpeg" class="carousel-slide" alt="Quiz App Screen 3">
+                <button class="prev-btn" onclick="changeSlide('carousel-1', -1)">&#10094;</button>
+                <button class="next-btn" onclick="changeSlide('carousel-1', 1)">&#10095;</button>
+              </div>
             </div>
+            
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Smart Quiz Master</h3>
               <p class="projects__row-content-desc">
                 An AI-driven educational platform that transforms unstructured data into interactive assessments. It leverages <strong>Large Language Models (LLMs)</strong> to analyze PDF documents and video transcripts, automatically generating quizzes to enhance learning retention.
               </p>
-              <a
-                href="https://appledinger.github.io/smart_quiz_master_mvp/"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >View Live App</a
-              >
+              
+              <div>
+                <a
+                  href="https://appledinger.github.io/smart_quiz_master_mvp/"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  href="./project-1.html"
+                  class="btn btn--med btn--theme dynamicBgClr btn-spacer"
+                  >Case Study</a
+                >
+              </div>
+              
             </div>
           </div>
 
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
-                alt="Geofencing App Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+              <div class="carousel-container" id="carousel-2">
+                <img src="./assets/jpeg/project2img1.jpeg" class="carousel-slide active" alt="Geofence App Screen 1">
+                <img src="./assets/jpeg/project2img2.jpeg" class="carousel-slide" alt="Geofence App Screen 2">
+                <img src="./assets/jpeg/project2img3.jpeg" class="carousel-slide" alt="Geofence App Screen 3">
+                <button class="prev-btn" onclick="changeSlide('carousel-2', -1)">&#10094;</button>
+                <button class="next-btn" onclick="changeSlide('carousel-2', 1)">&#10095;</button>
+              </div>
             </div>
+
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Geo-Spatial Safety System</h3>
               <p class="projects__row-content-desc">
                 A high-performance public safety platform engineered for real-time emergency response. Architected with a <strong>FastAPI</strong> backend and <strong>PostgreSQL</strong>, it utilizes advanced spatial querying to manage geofenced alerts and coordinate rapid assistance.
               </p>
-              <a
-                href="https://github.com/AppleDinger"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >View Code</a
-              >
+              
+              <div>
+                <a
+                  href="https://github.com/AppleDinger"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  target="_blank"
+                  >View Code</a
+                >
+                <a
+                  href="./project-2.html"
+                  class="btn btn--med btn--theme dynamicBgClr btn-spacer"
+                  >Case Study</a
+                >
+              </div>
+
             </div>
           </div>
 
-          </div>
+        </div>
       </div>
     </section>
+
     <section id="contact" class="contact sec-pad dynamicBg">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
@@ -276,6 +351,7 @@
         </div>
       </div>
     </section>
+
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
@@ -318,5 +394,30 @@
     </footer>
 
     <script src="./index.js"></script>
+
+    <script>
+      function changeSlide(carouselId, n) {
+        const container = document.getElementById(carouselId);
+        const slides = container.getElementsByClassName("carousel-slide");
+        let activeIndex = -1;
+
+        // Find current active slide
+        for (let i = 0; i < slides.length; i++) {
+          if (slides[i].classList.contains("active")) {
+            activeIndex = i;
+            slides[i].classList.remove("active");
+            break;
+          }
+        }
+
+        // Calculate new index
+        let newIndex = activeIndex + n;
+        if (newIndex >= slides.length) { newIndex = 0; }
+        if (newIndex < 0) { newIndex = slides.length - 1; }
+
+        // Show new slide
+        slides[newIndex].classList.add("active");
+      }
+    </script>
   </body>
 </html>
