@@ -300,68 +300,43 @@
       </div>
     </section>
 
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            Interested in collaborating or have a question? Reach out below.
-          </span>
-        </h2>
-       <div class="contact__form-container">
-  <form 
-    action="https://formspree.io/f/xnjgzaoa" 
-    method="POST" 
-    class="contact__form"
-  >
-    <input type="hidden" name="_subject" value="New Portfolio Message!">
-    <input type="text" name="_gotcha" style="display:none" />
-    <input type="hidden" name="_next" value="https://appledinger.github.io/index.html">
-    <div class="contact__form-field">
-      <label class="contact__form-label" for="name">Name</label>
-      <input
-        required
-        placeholder="Enter Your Name"
-        type="text"
-        class="contact__form-input"
-        name="name" 
-        id="name"
-      />
-    </div>
+   <section id="contact" class="contact sec-pad dynamicBg">
+  <div class="main-container">
+    <h2 class="heading heading-sec heading-sec__mb-med">
+      <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+      <span class="heading-sec__sub heading-sec__sub--lt">
+        Interested in collaborating or have a question? Reach out below.
+      </span>
+    </h2>
+    <div class="contact__form-container">
+      <form id="my-form" action="https://formspree.io/f/xnjgzaoa" method="POST" class="contact__form">
+        <input type="text" name="_gotcha" style="display:none" />
 
-    <div class="contact__form-field">
-      <label class="contact__form-label" for="email">Email</label>
-      <input
-        required
-        placeholder="Enter Your Email"
-        type="email" 
-        class="contact__form-input"
-        name="email"
-        id="email"
-      />
-    </div>
+        <div class="contact__form-field">
+          <label class="contact__form-label" for="name">Name</label>
+          <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
+        </div>
 
-    <div class="contact__form-field">
-      <label class="contact__form-label" for="message">Message</label>
-      <textarea
-        required
-        cols="30"
-        rows="10"
-        class="contact__form-input"
-        placeholder="Enter Your Message"
-        name="message"
-        id="message"
-      ></textarea>
-    </div>
+        <div class="contact__form-field">
+          <label class="contact__form-label" for="email">Email</label>
+          <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email" />
+        </div>
 
-    <button type="submit" class="btn btn--theme contact__btn">
-      Submit
-    </button>
-  </form> 
+        <div class="contact__form-field">
+          <label class="contact__form-label" for="message">Message</label>
+          <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn--theme contact__btn">
+          Submit
+        </button>
+
+        <div id="form-status" style="display:none; text-align:center; font-weight:600; margin-top:20px; font-size: 1.6rem;"></div>
+      </form>
+    </div>
   </div>
-      </div>
-    </section>
-
+</section>
+    
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
