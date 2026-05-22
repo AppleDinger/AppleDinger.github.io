@@ -62,9 +62,19 @@
         from {opacity: 0.6}
         to {opacity: 1}
       }
-      /* Style to space out the two buttons */
-      .btn-spacer {
-        margin-left: 10px; 
+      
+      /* Modern flexbox wrapper to prevent button layout breaking */
+      .project-btns-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin-top: 20px;
+      }
+      /* Clean resetting of previous custom manual spacers */
+      .project-btns-container .btn {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
       }
     </style>
   </head>
@@ -74,7 +84,7 @@
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
             <img
-              src="./assets/png/ram_pic_code.png"  <!-- This is my/Ram Profile image -->
+              src="./assets/personal_icons/ram_pic_code.png"
               alt="Ram Mishra Logo Image"
               class="header__logo-img"
             />
@@ -149,7 +159,7 @@
         <div class="home-hero__social">
           <a href="https://www.linkedin.com/in/mishra-ram/" class="home-hero__social-icon-link">
             <img
-              src="./assets/png/linkedin-ico.png"
+              src="./assets/personal_icons/linkedin-ico.png"
               alt="icon"
               class="home-hero__social-icon"
             />
@@ -158,7 +168,7 @@
         <div class="home-hero__social">
           <a href="https://github.com/AppleDinger" class="home-hero__social-icon-link" target="_blank">
             <img
-              src="./assets/png/github-ico.png"
+              src="./assets/personal_icons/github-ico.png"
               alt="icon"
               class="home-hero__social-icon"
             />
@@ -175,8 +185,8 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
           <span class="heading-sec__sub">
-            A student at heart who loves untangling complex algorithms and turning them into things people actually enjoy using.
-            When I'm not coding, I'm usually diving into AI , playing with software architecture, or experimenting with Systems Design.
+            A student at heart who loves untangling complex algorithms and turning them into things people actually enjoy using. 
+            I'm usually diving into AI , playing with software architecture, or experimenting with Systems Design.
           </span>
         </h2>
         <div class="about__content">
@@ -190,7 +200,7 @@
                 core programming concepts and a passion for Theoretical Computer Science.
               </p>
               <p class="about__content-details-para">
-                Right now i have been geeking out on <strong>Edge AI, SIMD, CUDA<strong> and
+                Right now i have been geeking out on <strong>Edge AI, SIMD, CUDA</strong> and
                 working on some upcoming projects that effieciently utilize computer systems.
                 Feel free to <strong>contact</strong> me below.
               </p>
@@ -230,8 +240,8 @@
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <div class="carousel-container" id="carousel-setu">
-                <img src="./assets/Indic_Graph.png" class="carousel-slide active" alt="Indic Network Graph Layout">
-                <img src="./assets/Abrahamic_Graph.png" class="carousel-slide" alt="Abrahamic Network Graph Layout">
+                <img src="./assets/project_assets/Indic_Graph.png" class="carousel-slide active" alt="Indic Network Graph Layout">
+                <img src="./assets/project_assets/Abrahamic_Graph.png" class="carousel-slide" alt="Abrahamic Network Graph Layout">
                 <button class="prev-btn" onclick="changeSlide('carousel-setu', -1)">&#10094;</button>
                 <button class="next-btn" onclick="changeSlide('carousel-setu', 1)">&#10095;</button>
               </div>
@@ -243,25 +253,10 @@
                 A reusable network analytics engine built for transforming long-form text into weighted graphs. It integrates NLP-driven entity resolution, modularity-based <strong>Louvain clustering</strong>, sliding-window co-occurrence extraction, and comprehensive centrality metrics using <strong>spaCy and NetworkX</strong> to discover connections and power structures within massive corpora.
               </p>
               
-              <div>
-                <a
-                  href="./project_setu.html"
-                  class="btn btn--med btn--theme dynamicBgClr btn-spacer"
-                  >Case Study</a
-                >
-                <a
-                  href="https://github.com/AppleDinger/Setu-Engine"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Engine Code</a
-                >
-                <a
-                  href="https://github.com/AppleDinger/Setu-dataset"
-                  class="btn btn--med btn--theme dynamicBgClr btn-spacer"
-                  target="_blank"
-                  >Dataset/Output</a
-                >
-              
+              <div class="project-btns-container">
+                <a href="./project_setu.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                <a href="https://github.com/AppleDinger/Setu-Engine" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Engine Code</a>
+                <a href="https://github.com/AppleDinger/Setu-dataset" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Dataset/Output</a>
               </div>
             </div>
           </div>
@@ -269,9 +264,9 @@
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <div class="carousel-container" id="carousel-2">
-                <img src="./assets/jpeg/kartavya_img1.jpeg" class="carousel-slide active" alt="Geofence App Screen 1">
-                <img src="./assets/jpeg/kartavya_img2.jpeg" class="carousel-slide" alt="Geofence App Screen 2">
-                <img src="./assets/jpeg/kartavya_img3.jpeg" class="carousel-slide" alt="Geofence App Screen 3">
+                <img src="./assets/project_assets/kartavya_img1.jpeg" class="carousel-slide active" alt="Geofence App Screen 1">
+                <img src="./assets/project_assets/kartavya_img2.jpeg" class="carousel-slide" alt="Geofence App Screen 2">
+                <img src="./assets/project_assets/kartavya_img3.jpeg" class="carousel-slide" alt="Geofence App Screen 3">
                 <button class="prev-btn" onclick="changeSlide('carousel-2', -1)">&#10094;</button>
                 <button class="next-btn" onclick="changeSlide('carousel-2', 1)">&#10095;</button>
               </div>
@@ -283,18 +278,10 @@
                 A high-performance public safety platform engineered for real-time emergency response. Architected with a <strong>FastAPI</strong> backend and <strong>PostgreSQL</strong> on Render, it utilizes advanced spatial querying and <strong>Argon2</strong> security to coordinate rapid assistance.
               </p>
               
-              <div>
-                <a
-                  href="https://github.com/AppleDinger/Kartavya_Police_App"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >View Code</a
-                >
-                <a
-                  href="./project_kartavya.html"
-                  class="btn btn--med btn--theme dynamicBgClr btn-spacer"
-                  >Case Study</a
-                >
+              <div class="project-btns-container">
+                <a href="./project_kartavya.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                <a href="https://github.com/AppleDinger/Kartavya_Police_App" class="btn btn--med btn--theme dynamicBgClr" target="_blank">View Code</a>
+                <a href="#" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Live Demo</a>
               </div>
             </div>
           </div>
@@ -302,9 +289,9 @@
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <div class="carousel-container" id="carousel-1">
-                <img src="./assets/jpeg/quiz_master_img1.png" class="carousel-slide active" alt="Quiz App Screen 1">
-                <img src="./assets/jpeg/quiz_master_img2.png" class="carousel-slide" alt="Quiz App Screen 2">
-                <img src="./assets/jpeg/quiz_master_img3.png" class="carousel-slide" alt="Quiz App Screen 3">
+                <img src="./assets/project_assets/quiz_master_img1.png" class="carousel-slide active" alt="Quiz App Screen 1">
+                <img src="./assets/project_assets/quiz_master_img2.png" class="carousel-slide" alt="Quiz App Screen 2">
+                <img src="./assets/project_assets/quiz_master_img3.png" class="carousel-slide" alt="Quiz App Screen 3">
                 <button class="prev-btn" onclick="changeSlide('carousel-1', -1)">&#10094;</button>
                 <button class="next-btn" onclick="changeSlide('carousel-1', 1)">&#10095;</button>
               </div>
@@ -316,18 +303,9 @@
                 An AI-driven educational platform that transforms unstructured data into interactive assessments. It leverages <strong>Large Language Models (LLMs)</strong> to analyze PDF documents and video transcripts, automatically generating quizzes to enhance learning retention.
               </p>
               
-              <div>
-                <a
-                  href="https://appledinger.github.io/smart_quiz_master_mvp/"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Live Demo</a
-                >
-                <a
-                  href="./project_quizmaster.html"
-                  class="btn btn--med btn--theme dynamicBgClr btn-spacer"
-                  >Case Study</a
-                >
+              <div class="project-btns-container">
+                <a href="./project_quizmaster.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                <a href="https://appledinger.github.io/smart_quiz_master_mvp/" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Live Demo</a>
               </div>
             </div>
           </div>
@@ -384,14 +362,14 @@
               <a target="_blank" rel="noreferrer" href="#">
                 <img
                   class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
+                  src="./assets/personal_icons/linkedin-ico.png"
                   alt="icon"
                 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://github.com/AppleDinger">
                 <img
                   class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
+                  src="./assets/personal_icons/github-ico.png"
                   alt="icon"
                 />
               </a>
