@@ -74,7 +74,7 @@
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
             <img
-              src="./assets/png/ram_pic_code.png"
+              src="./assets/png/ram_pic_code.png"  <!-- This is my/Ram Profile image -->
               alt="Ram Mishra Logo Image"
               class="header__logo-img"
             />
@@ -138,7 +138,7 @@
         <div class="home-hero__info">
           <p class="text-primary">
             Computer Science Student at <strong>NIT Goa</strong>. 
-            Building (and occasionally breaking) software at the intersection of architecture, BI, and research.
+            Building (and occasionally breaking) software at the intersection of AI, Data, architecture and research.
             I'm a student dev focused on using tech to solve messy social problems.          </p>
         </div>
         <div class="home-hero__cta">
@@ -147,7 +147,7 @@
       </div>
       <div class="home-hero__socials">
         <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
+          <a href="https://www.linkedin.com/in/mishra-ram/" class="home-hero__social-icon-link">
             <img
               src="./assets/png/linkedin-ico.png"
               alt="icon"
@@ -176,24 +176,22 @@
           <span class="heading-sec__main">About Me</span>
           <span class="heading-sec__sub">
             A student at heart who loves untangling complex algorithms and turning them into things people actually enjoy using.
-            When I'm not coding, I'm usually diving into software architecture, playing with BI dashboards, or experimenting with electronics and research.
+            When I'm not coding, I'm usually diving into AI , playing with software architecture, or experimenting with Systems Design.
           </span>
         </h2>
         <div class="about__content">
           <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
+            <h3 class="about__content-title">What else do I enjoy!</h3>
             <div class="about__content-details">
               <p class="about__content-details-para">
-                Hey! It's <strong>Ram Mishra</strong> and I'm a 
-                <strong>Computer Science Student</strong> at 
-                <strong>NIT Goa</strong>. I have a strong foundation in 
-                core programming concepts and a passion for full-stack development and Software Architecture.
+                Ehh! I like <strong>Logic, Philosophy, Ethics and Linguistics</strong> too. 
+                I nerd out over <strong>Politics, Literature, Culture. </strong>  
+                I have a strong foundation in 
+                core programming concepts and a passion for Theoretical Computer Science.
               </p>
               <p class="about__content-details-para">
-                I specialize in <strong>C, C++, and Python</strong>. 
-                Recently, I have been architecting solutions involving 
-                <strong>FastAPI and PostgreSQL</strong> to create smart 
-                systems for public safety and education technology.
+                Right now i have been geeking out on <strong>Edge AI, SIMD, CUDA<strong> and
+                working on some upcoming projects that effieciently utilize computer systems.
                 Feel free to <strong>contact</strong> me below.
               </p>
             </div>
@@ -204,13 +202,13 @@
           <div class="about__content-skills">
             <h3 class="about__content-title">My Skills</h3>
             <div class="skills">
+              <div class="skills__skill">AI engineering</div>              
               <div class="skills__skill">C / C++</div>
-              <div class="skills__skill">Java</div>
               <div class="skills__skill">Python</div>
               <div class="skills__skill">SQL</div>
-              <div class="skills__skill">Javascript</div>
+              <div class="skills__skill">Javascript / TS</div>
+              <div class="skills__skill">Data Analysis</div>              
               <div class="skills__skill">GIT</div>
-              <div class="skills__skill">HTML/CSS</div>
               <div class="skills__skill">FastAPI</div>
             </div>
           </div>
@@ -231,44 +229,49 @@
           
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <div class="carousel-container" id="carousel-1">
-                <img src="./assets/jpeg/project1img1.png" class="carousel-slide active" alt="Quiz App Screen 1">
-                <img src="./assets/jpeg/project1img2.png" class="carousel-slide" alt="Quiz App Screen 2">
-                <img src="./assets/jpeg/project1img3.png" class="carousel-slide" alt="Quiz App Screen 3">
-                <button class="prev-btn" onclick="changeSlide('carousel-1', -1)">&#10094;</button>
-                <button class="next-btn" onclick="changeSlide('carousel-1', 1)">&#10095;</button>
+              <div class="carousel-container" id="carousel-setu">
+                <img src="./assets/Indic_Graph.png" class="carousel-slide active" alt="Indic Network Graph Layout">
+                <img src="./assets/Abrahamic_Graph.png" class="carousel-slide" alt="Abrahamic Network Graph Layout">
+                <button class="prev-btn" onclick="changeSlide('carousel-setu', -1)">&#10094;</button>
+                <button class="next-btn" onclick="changeSlide('carousel-setu', 1)">&#10095;</button>
               </div>
             </div>
             
             <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Smart Quiz Master</h3>
+              <h3 class="projects__row-content-title">Setu Engine</h3>
               <p class="projects__row-content-desc">
-                An AI-driven educational platform that transforms unstructured data into interactive assessments. It leverages <strong>Large Language Models (LLMs)</strong> to analyze PDF documents and video transcripts, automatically generating quizzes to enhance learning retention.
+                A reusable network analytics engine built for transforming long-form text into weighted graphs. It integrates NLP-driven entity resolution, modularity-based <strong>Louvain clustering</strong>, sliding-window co-occurrence extraction, and comprehensive centrality metrics using <strong>spaCy and NetworkX</strong> to discover connections and power structures within massive corpora.
               </p>
               
               <div>
                 <a
-                  href="https://appledinger.github.io/smart_quiz_master_mvp/"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Live Demo</a
-                >
-                <a
-                  href="./project-1.html"
+                  href="./project_setu.html"
                   class="btn btn--med btn--theme dynamicBgClr btn-spacer"
                   >Case Study</a
                 >
-              </div>
+                <a
+                  href="https://github.com/AppleDinger/Setu-Engine"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  target="_blank"
+                  >Engine Code</a
+                >
+                <a
+                  href="https://github.com/AppleDinger/Setu-dataset"
+                  class="btn btn--med btn--theme dynamicBgClr btn-spacer"
+                  target="_blank"
+                  >Dataset/Output</a
+                >
               
+              </div>
             </div>
           </div>
 
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <div class="carousel-container" id="carousel-2">
-                <img src="./assets/jpeg/project2img1.jpeg" class="carousel-slide active" alt="Geofence App Screen 1">
-                <img src="./assets/jpeg/project2img2.jpeg" class="carousel-slide" alt="Geofence App Screen 2">
-                <img src="./assets/jpeg/project2img3.jpeg" class="carousel-slide" alt="Geofence App Screen 3">
+                <img src="./assets/jpeg/kartavya_img1.jpeg" class="carousel-slide active" alt="Geofence App Screen 1">
+                <img src="./assets/jpeg/kartavya_img2.jpeg" class="carousel-slide" alt="Geofence App Screen 2">
+                <img src="./assets/jpeg/kartavya_img3.jpeg" class="carousel-slide" alt="Geofence App Screen 3">
                 <button class="prev-btn" onclick="changeSlide('carousel-2', -1)">&#10094;</button>
                 <button class="next-btn" onclick="changeSlide('carousel-2', 1)">&#10095;</button>
               </div>
@@ -288,55 +291,88 @@
                   >View Code</a
                 >
                 <a
-                  href="./project-2.html"
+                  href="./project_kartavya.html"
                   class="btn btn--med btn--theme dynamicBgClr btn-spacer"
                   >Case Study</a
                 >
               </div>
-
             </div>
           </div>
+
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <div class="carousel-container" id="carousel-1">
+                <img src="./assets/jpeg/quiz_master_img1.png" class="carousel-slide active" alt="Quiz App Screen 1">
+                <img src="./assets/jpeg/quiz_master_img2.png" class="carousel-slide" alt="Quiz App Screen 2">
+                <img src="./assets/jpeg/quiz_master_img3.png" class="carousel-slide" alt="Quiz App Screen 3">
+                <button class="prev-btn" onclick="changeSlide('carousel-1', -1)">&#10094;</button>
+                <button class="next-btn" onclick="changeSlide('carousel-1', 1)">&#10095;</button>
+              </div>
+            </div>
+            
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Smart Quiz Master</h3>
+              <p class="projects__row-content-desc">
+                An AI-driven educational platform that transforms unstructured data into interactive assessments. It leverages <strong>Large Language Models (LLMs)</strong> to analyze PDF documents and video transcripts, automatically generating quizzes to enhance learning retention.
+              </p>
+              
+              <div>
+                <a
+                  href="https://appledinger.github.io/smart_quiz_master_mvp/"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  href="./project_quizmaster.html"
+                  class="btn btn--med btn--theme dynamicBgClr btn-spacer"
+                  >Case Study</a
+                >
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-   <section id="contact" class="contact sec-pad dynamicBg">
-  <div class="main-container">
-    <h2 class="heading heading-sec heading-sec__mb-med">
-      <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-      <span class="heading-sec__sub heading-sec__sub--lt">
-        Interested in collaborating or have a question? Reach out below.
-      </span>
-    </h2>
-    <div class="contact__form-container">
-      <form id="my-form" action="https://formspree.io/f/xnjgzaoa" method="POST" class="contact__form">
-        <input type="text" name="_gotcha" style="display:none" />
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            Interested in collaborating or have a question? Reach out below.
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form id="my-form" action="https://formspree.io/f/xnjgzaoa" method="POST" class="contact__form">
+            <input type="text" name="_gotcha" style="display:none" />
 
-        <div class="contact__form-field">
-          <label class="contact__form-label" for="name">Name</label>
-          <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
+            </div>
+
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email" />
+            </div>
+
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn--theme contact__btn">
+              Submit
+            </button>
+
+            <div id="form-status" style="display:none; text-align:center; font-weight:600; margin-top:20px; font-size: 1.6rem;"></div>
+          </form>
         </div>
-
-        <div class="contact__form-field">
-          <label class="contact__form-label" for="email">Email</label>
-          <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email" />
-        </div>
-
-        <div class="contact__form-field">
-          <label class="contact__form-label" for="message">Message</label>
-          <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
-        </div>
-
-        <button type="submit" id="submit-btn" class="btn btn--theme contact__btn">
-          Submit
-        </button>
-
-        <div id="form-status" style="display:none; text-align:center; font-weight:600; margin-top:20px; font-size: 1.6rem;"></div>
-      </form>
-    </div>
-  </div>
-</section>
-    
+      </div>
+    </section>
+      
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
@@ -370,7 +406,7 @@
         </div>
 
         <div class="main-footer__lower">
-          &copy; Copyright 2025. Made by
+          &copy; Copyright 2026. Made by
           <a rel="noreferrer" target="_blank" href="#"
             >Ram Mishra</a
           >
