@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Kartavya | Case Study</title>
-    <meta name="description" content="Case study of Kartavya Police Geofencing System." />
+    <title>SETU Engine | Case Study</title>
+    <meta name="description" content="Case study of SETU Asynchronous Network Engineering Pipeline and Graph Analytics Architecture." />
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -72,7 +72,7 @@
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
             <img
-              src="./assets/png/ram_pic_code.png"
+              src="./assets/personal_icons/ram_pic_code.png"
               alt="Ram Mishra Logo Image"
               class="header__logo-img"
             />
@@ -88,9 +88,7 @@
               <a href="./index.html#about" class="header__link">About </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link">
-                Projects
-              </a>
+              <a href="./index.html#projects" class="header__link">Projects </a>
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#contact" class="header__link"> Contact </a>
@@ -132,14 +130,15 @@
 
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Kartavya Command System</h1>
+        <h1 class="heading-primary">SETU Network Analytics Engine</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            A full-stack situational awareness platform utilizing FastAPI and PostgreSQL to manage police unit tracking, dynamic geofencing, and secure communication.
+            An asynchronous text mining pipeline and graph analytics architecture featuring GPU-accelerated NLP tokenization, deterministic alias normalization, and modularity-based community detection.
           </p>
         </div>
         <div class="project-cs-hero__cta">
-          <a href="https://kartavya-frontend.onrender.com" class="btn btn--bg" target="_blank">Live Demo</a>
+          <a href="https://github.com/AppleDinger/Setu-engine" class="btn btn--bg" target="_blank">Engine Repository</a>
+          <a href="https://github.com/AppleDinger/Setu-dataset" class="btn btn--bg" style="margin-left: 10px;" target="_blank">Dataset Repository</a>
         </div>
       </div>
     </section>
@@ -150,9 +149,10 @@
           
           <div class="project-details__showcase-img-cont">
             <div class="carousel-container" id="carousel-details">
-                <img src="./assets/jpeg/project2img1.jpeg" class="carousel-slide active" alt="Dashboard Map View">
-                <img src="./assets/jpeg/project2img2.jpeg" class="carousel-slide" alt="Officer Login Screen">
-                <img src="./assets/jpeg/project2img3.jpeg" class="carousel-slide" alt="Geofence Alerts">
+                <img src="./assets/project_assets/Indic_Graph.png" class="carousel-slide active" alt="Indic Cluster Macro Topology">
+                <img src="./assets/project_assets/Indic_mahabharata.png" class="carousel-slide" alt="Mahabharata Faction Sub-graph">
+                <img src="./assets/project_assets/Abrahamic_Graph.png" class="carousel-slide" alt="Abrahamic Cluster Macro Topology">
+                <img src="./assets/project_assets/Abrahamic_roman.png" class="carousel-slide" alt="Roman Administrative Faction Zoom">
                 
                 <button class="prev-btn" onclick="changeSlide('carousel-details', -1)">&#10094;</button>
                 <button class="next-btn" onclick="changeSlide('carousel-details', 1)">&#10095;</button>
@@ -163,19 +163,24 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                Kartavya is a specialized Command & Control system designed for the Goa Police Department. It replaces legacy manual tracking with a real-time digital dashboard, allowing supervisors to monitor field units across North and South Goa jurisdictions.
+                SETU is a high-throughput text mining and network science platform designed to ingest unstructured natural language corpora and construct multi-dimensional, weighted graph visualizations. The engine uses a completely decoupled architecture, separating its core computation layers from relational graph data asset storage.
               </p>
               <p class="project-details__desc-para">
-                The core engine features a <strong>dynamic geofencing algorithm</strong> that automatically detects when officers leave their assigned zones. It also includes a <strong>Broadcast Ping System</strong> for rapid communication during high-priority alerts.
+                To validate the framework's semantic processing capacity, a comparative macro-structural study was executed across 14 extensive historical, epic, and religious texts. The system extracted thousands of relational co-occurrences, tracking how structural properties like network diameter, path lengths, density, and centralization profiles shift across different cultural text worlds.
               </p>
               
-              <h3 class="project-details__content-title">Key Engineering Features</h3>
-              
+              <h3 class="project-details__content-title">Core Engine Engineering</h3>
               <ul style="margin-bottom: 20px; color: #666; line-height: 1.6; font-size: 1.8rem;">
-                <li style="margin-bottom: 10px;"><strong>FastAPI Backend:</strong> A high-performance REST API handling asynchronous location updates and spatial calculations.</li>
-                <li style="margin-bottom: 10px;"><strong>Secure Authentication:</strong> Implemented <strong>Argon2 hashing</strong> to replace standard Bcrypt, ensuring industry-grade password security on cloud infrastructure.</li>
-                <li style="margin-bottom: 10px;"><strong>Interactive Dashboard:</strong> A <strong>Streamlit</strong> frontend integrated with <strong>Folium</strong> maps for visualizing live unit positions and historical paths.</li>
-                <li style="margin-bottom: 10px;"><strong>Cloud Architecture:</strong> Fully deployed on <strong>Render</strong>, utilizing a managed PostgreSQL database for persistent storage of logs and personnel records.</li>
+                <li style="margin-bottom: 10px;"><strong>GPU-Accelerated Core NLP:</strong> Integrated a middleweight spaCy processing pipeline with PyTorch CUDA hooks to offload batch parsing tasks to an NVIDIA RTX 4060 laptop GPU, achieving optimal processing speeds over thousands of token windows.</li>
+                <li style="margin-bottom: 10px;"><strong>Deterministic Identity Resolution:</strong> Injected a customized EntityRuler layer to normalize character name variations, variant historical translations, and aliases into singular, static node IDs to prevent duplicate nodes.</li>
+                <li style="margin-bottom: 10px;"><strong>Tumbling Window Co-occurrence Matrix:</strong> Engineered a sliding-window text parser that scans target streams based on word proximity, tracking overlapping occurrences into sorted tuple schemas while ignoring cross-chapter line noise.</li>
+                <li style="margin-bottom: 10px;"><strong>Modularity-Based Partition Clustering:</strong> Deployed Louvain optimization algorithms to compute structural centrality vectors and partition the network topology into stable narrative communities.</li>
+              </ul>
+
+              <h3 class="project-details__content-title">Empirical Case Study Insights</h3>
+              <ul style="margin-bottom: 20px; color: #666; line-height: 1.6; font-size: 1.8rem;">
+                <li style="margin-bottom: 10px;"><strong>Indic Cluster Topology:</strong> Revealed a distinct, highly decentralized network structure ($Density = 0.19580$) split into clear, localized text factions. The sub-graphs group into distinct clusters (Vedic, Epic, Puranic) driven by heavy cross-referencing around massive central hubs like Krishna and Arjuna.</li>
+                <li style="margin-bottom: 10px;"><strong>Abrahamic Cluster Topology:</strong> Exhibited an integrated, linear path trace ($Density = 0.12143$) driven by chronological ancestral lines, structural continuity, and persistent references to an anchor entity across generational links.</li>
               </ul>
             </div>
 
@@ -183,28 +188,28 @@
               <h3 class="project-details__content-title">Tech Stack</h3>
               <div class="skills">
                 <div class="skills__skill">Python</div>
-                <div class="skills__skill">FastAPI</div>
-                <div class="skills__skill">PostgreSQL</div>
-                <div class="skills__skill">Streamlit</div>
-                <div class="skills__skill">Folium</div>
-                <div class="skills__skill">Argon2</div>
-                <div class="skills__skill">Render</div>
+                <div class="skills__skill">spaCy</div>
+                <div class="skills__skill">NetworkX</div>
+                <div class="skills__skill">Pandas</div>
+                <div class="skills__skill">PyTorch CUDA</div>
+                <div class="skills__skill">Gephi (GEXF)</div>
+                <div class="skills__skill">Bash Scripting</div>
               </div>
             </div>
 
             <div class="project-details__links">
-              <h3 class="project-details__content-title">See Live</h3>
+              <h3 class="project-details__content-title">Project Repositories</h3>
               <a
-                href="https://kartavya-frontend.onrender.com"
+                href="https://github.com/AppleDinger/Setu-engine"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
-                >Live Link</a
+                >Engine Source</a
               >
               <a
-                href="https://github.com/AppleDinger/kartavya-app" 
+                href="https://github.com/AppleDinger/Setu-dataset"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
-                >Code Link</a
+                >Dataset Output</a
               >
             </div>
           </div>
@@ -223,14 +228,14 @@
               <a target="_blank" rel="noreferrer" href="#">
                 <img
                   class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
+                  src="./assets/personal_icons/linkedin-ico.png"
                   alt="icon"
                 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://github.com/AppleDinger">
                 <img
                   class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
+                  src="./assets/personal_icons/github-ico.png"
                   alt="icon"
                 />
               </a>
@@ -245,7 +250,7 @@
         </div>
 
         <div class="main-footer__lower">
-          &copy; Copyright 2025. Made by
+          &copy; Copyright 2026. Made by
           <a rel="noreferrer" target="_blank" href="./index.html"
             >Ram Mishra</a
           >
